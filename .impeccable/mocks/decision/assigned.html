@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Louça esmaltada</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:412px;height:915px;overflow:hidden}
+body{font-family:Roboto,system-ui,sans-serif;background:#F3F5F4;color:#1B1F24}
+.bar{background:#1F3A8A;color:#fff;padding:40px 20px 18px}
+.bar h1{font-size:22px;font-weight:500;letter-spacing:.2px}
+.conn{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:14px;color:#D6DDF2}
+.dot{width:8px;height:8px;border-radius:50%;background:#7FD3A0}
+.conn a{margin-left:auto;color:#fff;font-weight:500;font-size:14px;text-decoration:none}
+.plate-wrap{display:flex;justify-content:center;padding:28px 0 18px}
+.plate{width:300px;height:300px;border-radius:50%;
+ background:conic-gradient(#2E7D4F 0 70%,#B7791F 70% 78%,#2E7D4F 78% 100%);
+ padding:14px;box-shadow:0 1px 0 #fff inset,0 6px 18px rgba(27,31,36,.10)}
+.glaze{width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0,#fff 40%,#F1F4F3 100%);
+ display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 34px;border:1px solid #E2E7E5}
+.state{font-size:44px;font-weight:700;letter-spacing:-.5px;color:#1B1F24}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#2E7D4F;margin-bottom:8px;text-transform:uppercase;letter-spacing:.8px}
+.badge i{width:10px;height:10px;border-radius:50%;background:#2E7D4F}
+.say{font-size:15px;line-height:21px;color:#3F464D;margin-top:8px}
+.when{font-size:12px;color:#6B737A;margin-top:12px}
+.legend{display:flex;justify-content:center;gap:16px;font-size:12px;color:#6B737A}
+.legend span::before{content:"";display:inline-block;width:14px;height:3px;margin-right:6px;vertical-align:middle;background:currentColor}
+.l1{color:#2E7D4F}.l2{color:#B7791F}
+.legend em{font-style:normal;color:#6B737A}
+.list{margin:22px 16px 0;background:#fff;border-radius:16px;border:1px solid #E2E7E5}
+.row{display:flex;align-items:center;padding:16px;border-top:1px solid #E2E7E5}
+.row:first-child{border-top:0}
+.name{flex:1}
+.name b{display:block;font-size:16px;font-weight:500}
+.name small{font-size:12px;color:#6B737A}
+.name p{font-size:13px;color:#4A5157;margin-top:2px}
+.val{text-align:right}
+.val b{font-size:22px;font-weight:500;font-variant-numeric:tabular-nums}
+.val small{display:block;font-size:12px;color:#2E7D4F;font-weight:500}
+.sec{margin:22px 20px 8px;font-size:14px;font-weight:500;color:#1F3A8A;letter-spacing:.3px}
+</style></head><body>
+<div class="bar">
+  <h1>Detector de Gases</h1>
+  <div class="conn"><span class="dot"></span>Conectado ao detector da cozinha<a href="#">Desconectar</a></div>
+</div>
+<div class="plate-wrap"><div class="plate"><div class="glaze">
+  <div class="badge"><i></i>Normal</div>
+  <div class="state">Ar normal</div>
+  <p class="say">Nenhum gás ou fumaça acima do normal.</p>
+  <p class="when">Atualizado agora · borda = última hora</p>
+</div></div></div>
+<div class="legend"><span class="l1">normal</span><span class="l2">atenção 9 min</span><em>há 22 min</em></div>
+<div class="list">
+  <div class="row"><div class="name"><b>Gás e fumaça</b><small>MQ-2</small><p>Vazamento de gás de cozinha ou fumaça</p></div><div class="val"><b>212</b><small>baixo</small></div></div>
+  <div class="row"><div class="name"><b>Qualidade do ar</b><small>MQ-135</small><p>Gases e cheiros no ambiente</p></div><div class="val"><b>168</b><small>baixo</small></div></div>
+  <div class="row"><div class="name"><b>Temperatura</b><small>LM35</small><p>Calor perto do fogão</p></div><div class="val"><b>25,5 °C</b><small>normal</small></div></div>
+</div>
+<div class="sec">Última hora</div>
+</body></html>

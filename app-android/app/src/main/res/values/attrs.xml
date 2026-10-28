@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- cores que mudam com o tema escolhido (Temas.kt) -->
+    <attr name="marca" format="color" />
+    <attr name="marca_base" format="color" />
+    <attr name="marca_clara" format="color" />
+    <attr name="acao" format="color" />
+    <attr name="toque" format="color" />
+</resources>

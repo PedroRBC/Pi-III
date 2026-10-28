@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Cartões de app de consumo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:412px;height:915px;overflow:hidden}
+body{font-family:Roboto,system-ui,sans-serif;background:#F5EFE6;color:#2A2520;padding:44px 16px 0}
+h1{font-size:26px;font-weight:700;margin:0 4px 4px}
+.sub{font-size:14px;color:#7A6F64;margin:0 4px 18px}
+.card{background:#fff;border-radius:24px;padding:22px;margin-bottom:12px}
+.hero{text-align:left}
+.pill{display:inline-block;background:#E6F2EC;color:#1F5F45;border-radius:999px;padding:6px 12px;font-size:13px;font-weight:500}
+.hero b{display:block;font-size:34px;font-weight:700;margin:14px 0 6px}
+.hero p{font-size:16px;line-height:23px;color:#5A5048}
+.row{display:flex;gap:12px}
+.mini{flex:1;background:#fff;border-radius:20px;padding:16px}
+.mini span{font-size:13px;color:#7A6F64}
+.mini b{display:block;font-size:24px;font-weight:600;margin-top:8px}
+.mini small{font-size:12px;color:#1F5F45}
+.chart svg{width:100%;height:120px;margin-top:10px}
+.chart span{font-size:14px;font-weight:500}
+.cta{position:absolute;left:16px;right:16px;bottom:40px;height:56px;border-radius:28px;background:#0B6E4F;color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:500}
+</style></head><body>
+<h1>Detector de Gases</h1>
+<p class="sub">Conectado à cozinha · agora</p>
+<div class="card hero"><span class="pill">Tudo certo</span><b>O ar está normal</b><p>Não encontramos gás nem fumaça. Avisaremos aqui se algo mudar.</p></div>
+<div class="row">
+  <div class="mini"><span>Gás e fumaça</span><b>212</b><small>baixo</small></div>
+  <div class="mini"><span>Ar</span><b>168</b><small>baixo</small></div>
+  <div class="mini"><span>Calor</span><b>25,5°</b><small>normal</small></div>
+</div>
+<div class="card chart" style="margin-top:12px"><span>Última hora</span>
+<svg viewBox="0 0 340 120"><path d="M0 95 C40 92 70 96 110 88 S170 50 200 58 S260 96 340 92" fill="none" stroke="#2A2520" stroke-width="2.5"/></svg></div>
+<div class="cta">Ver detalhes</div>
+</body></html>

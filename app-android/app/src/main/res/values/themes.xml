@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- base clara/escura; o Tema e os temas de cor ficam só em values/themes.xml -->
+    <style name="TemaBase" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <!-- Tema padrão: roxo e cinza. Verde, âmbar e vermelho não mudam: são dos estados. -->
+    <style name="Tema" parent="TemaBase">
+        <item name="android:windowBackground">@color/rejunte</item>
+        <item name="android:statusBarColor">@color/rejunte</item>
+        <item name="android:colorPrimary">?attr/marca</item>
+        <item name="android:colorAccent">?attr/acao</item>
+        <item name="android:alertDialogTheme">@style/Tema.Dialogo</item>
+        <item name="marca">@color/roxo</item>
+        <item name="marca_base">@color/roxo_base</item>
+        <item name="marca_clara">@color/roxo_claro</item>
+        <item name="acao">@color/roxo_acao</item>
+        <item name="toque">@color/roxo_toque</item>
+    </style>
+
+    <style name="Tema.Azul">
+        <item name="marca">@color/azul</item>
+        <item name="marca_base">@color/azul_base</item>
+        <item name="marca_clara">@color/azul_claro</item>
+        <item name="acao">@color/azul_acao</item>
+        <item name="toque">@color/azul_toque</item>
+    </style>
+
+    <style name="Tema.Petroleo">
+        <item name="marca">@color/petroleo</item>
+        <item name="marca_base">@color/petroleo_base</item>
+        <item name="marca_clara">@color/petroleo_claro</item>
+        <item name="acao">@color/petroleo_acao</item>
+        <item name="toque">@color/petroleo_toque</item>
+    </style>
+
+    <style name="Tema.Grafite">
+        <item name="marca">@color/grafite</item>
+        <item name="marca_base">@color/grafite_base</item>
+        <item name="marca_clara">@color/grafite_claro</item>
+        <item name="acao">@color/grafite_acao</item>
+        <item name="toque">@color/grafite_toque</item>
+    </style>
+
+    <style name="Tema.Dialogo" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:colorAccent">?attr/acao</item>
+        <item name="android:colorBackground">@color/azulejo</item>
+        <item name="android:textColorPrimary">@color/tinta</item>
+        <item name="android:textColorSecondary">@color/tinta_media</item>
+        <item name="android:buttonBarButtonStyle">@style/Tema.BotaoDialogo</item>
+    </style>
+
+    <style name="Tema.BotaoDialogo" parent="@android:style/Widget.Material.Light.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Textos -->
+    <style name="Texto.Titulo" parent="">
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/tinta</item>
+    </style>
+
+    <style name="Texto.Tecnico" parent="">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/tinta_fraca</item>
+    </style>
+
+    <style name="Texto.Corpo" parent="">
+        <item name="android:textSize">14sp</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/tinta_media</item>
+    </style>
+
+    <style name="Ladrilho">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:background">@drawable/ladrilho</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
+    </style>
+</resources>

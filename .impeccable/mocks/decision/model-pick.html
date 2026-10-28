@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Parede de azulejo</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:412px;height:915px;overflow:hidden}
+body{font-family:Roboto,system-ui,sans-serif;background:#D9DCD6;color:#22262B;padding:36px 8px 8px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.t{background:#FBFBF8;border-radius:3px;aspect-ratio:1;padding:12px;box-shadow:inset 0 1px 0 #fff,inset 0 -2px 0 #ECEDE8;display:flex;flex-direction:column;justify-content:space-between}
+.head{grid-column:span 4;aspect-ratio:auto;height:96px;background:#1E4FA3;color:#fff;justify-content:center}
+.head h1{font-size:22px;font-weight:500}
+.head p{font-size:13px;color:#CFDBF2;margin-top:4px}
+.state{grid-column:span 4;aspect-ratio:auto;height:250px;justify-content:center;align-items:center;text-align:center;border:3px solid #2E7D4F}
+.state b{font-size:44px;font-weight:700}
+.state p{font-size:15px;color:#454B51;margin-top:8px}
+.state small{font-size:12px;color:#2E7D4F;font-weight:500;text-transform:uppercase;letter-spacing:.8px}
+.s2{grid-column:span 2;aspect-ratio:auto;height:140px}
+.lbl{font-size:13px;color:#5D646A}
+.lbl small{display:block;font-size:11px;color:#8A9096}
+.num{font-size:30px;font-weight:500;font-variant-numeric:tabular-nums}
+.ok{font-size:12px;color:#2E7D4F;font-weight:500}
+.motif{background:#FBFBF8 radial-gradient(circle,#1E4FA3 0 18%,transparent 19%),#FBFBF8;}
+.chart{grid-column:span 4;aspect-ratio:auto;height:170px}
+.chart svg{width:100%;height:110px}
+.btn{grid-column:span 4;aspect-ratio:auto;height:64px;background:#FBFBF8;align-items:center;justify-content:center;font-size:15px;font-weight:500;color:#1E4FA3}
+</style></head><body>
+<div class="grid">
+  <div class="t head"><h1>Detector de Gases</h1><p>Conectado ao detector da cozinha</p></div>
+  <div class="t state"><small>Normal</small><b>Ar normal</b><p>Nenhum gás ou fumaça acima do normal.</p></div>
+  <div class="t s2"><div class="lbl">Gás e fumaça<small>MQ-2</small></div><div><div class="num">212</div><div class="ok">baixo</div></div></div>
+  <div class="t s2"><div class="lbl">Qualidade do ar<small>MQ-135</small></div><div><div class="num">168</div><div class="ok">baixo</div></div></div>
+  <div class="t s2"><div class="lbl">Temperatura<small>LM35</small></div><div><div class="num">25,5°</div><div class="ok">normal</div></div></div>
+  <div class="t motif"></div><div class="t motif"></div>
+  <div class="t chart"><div class="lbl">Gás e fumaça · última hora</div>
+    <svg viewBox="0 0 380 110"><polyline fill="none" stroke="#1E4FA3" stroke-width="2.5" points="0,90 40,86 80,88 120,80 160,60 200,52 240,84 280,88 320,86 380,84"/><line x1="0" x2="380" y1="40" y2="40" stroke="#B7791F" stroke-dasharray="4 4"/></svg></div>
+  <div class="t btn">Desconectar</div>
+</div>
+</body></html>

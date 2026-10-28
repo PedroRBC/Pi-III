@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="rejunte">#0F1113</color>
+    <color name="azulejo">#1D2023</color>
+    <color name="esmalte_base">#141618</color>
+    <color name="tinta">#E7E9E6</color>
+    <color name="tinta_media">#B9BEC3</color>
+    <color name="tinta_fraca">#A2A8AE</color>
+    <color name="fio">#2B2F33</color>
+
+    <color name="normal">#7DCB9F</color>
+    <color name="normal_vidrado">#3C6E51</color>
+    <color name="normal_base">#2B5440</color>
+    <color name="atencao">#F0BA5C</color>
+    <color name="atencao_vidrado">#C98B2B</color>
+    <color name="atencao_base">#9A6A1F</color>
+    <color name="perigo">#C2342A</color>
+    <color name="perigo_base">#8E211A</color>
+    <color name="sem_conexao">#8D9399</color>
+    <color name="faixa_atencao">#3A3122</color>
+    <color name="faixa_perigo">#40261F</color>
+
+    <!-- temas: cor da marca de cada um (ver Temas.kt) -->
+    <color name="roxo">#563A96</color>
+    <color name="roxo_base">#3D2970</color>
+    <color name="roxo_claro">#D4CAEE</color>
+    <color name="roxo_acao">#BBA8EE</color>
+    <color name="roxo_toque">#33BBA8EE</color>
+    <color name="azul">#24519F</color>
+    <color name="azul_base">#183A75</color>
+    <color name="azul_claro">#C9D5EE</color>
+    <color name="azul_acao">#A6BEF2</color>
+    <color name="azul_toque">#33A6BEF2</color>
+    <color name="petroleo">#105C6C</color>
+    <color name="petroleo_base">#0A404C</color>
+    <color name="petroleo_claro">#C4E1E7</color>
+    <color name="petroleo_acao">#86CBD7</color>
+    <color name="petroleo_toque">#3386CBD7</color>
+    <color name="grafite">#3A3F45</color>
+    <color name="grafite_base">#272B30</color>
+    <color name="grafite_claro">#D3D7DB</color>
+    <color name="grafite_acao">#C9CED3</color>
+    <color name="grafite_toque">#33C9CED3</color>
+</resources>

@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-28T00:17:51+00:00",
+  "title": "Design System: Detector de Gases",
+  "extensions": {
+    "platform": "android (Views + XML, sem AndroidX)",
+    "colorMeta": {
+      "marca": {
+        "role": "primary",
+        "displayName": "Roxo da Marca",
+        "canonical": "#5B3D9E",
+        "tonalRamp": [
+          "#00003B",
+          "#001D5B",
+          "#173C7C",
+          "#355C9F",
+          "#547DC2",
+          "#749FE7",
+          "#98C5FF",
+          "#C1F0FF"
+        ],
+        "night": "#563A96"
+      },
+      "marca_base": {
+        "role": "primary",
+        "displayName": "Base da Marca",
+        "canonical": "#45307A",
+        "tonalRamp": [
+          "#000332",
+          "#052051",
+          "#203E72",
+          "#3D5D94",
+          "#5C7DB6",
+          "#7C9FDA",
+          "#A1C5FF",
+          "#CAF0FF"
+        ],
+        "night": "#3D2970"
+      },
+      "marca_clara": {
+        "role": "primary",
+        "displayName": "Marca Lavada",
+        "canonical": "#DCD2F2",
+        "tonalRamp": [
+          "#070B16",
+          "#1E2430",
+          "#39404D",
+          "#575E6C",
+          "#767D8C",
+          "#979FAE",
+          "#BCC4D5",
+          "#E7EFFF"
+        ],
+        "night": "#D4CAEE"
+      },
+      "acao": {
+        "role": "primary",
+        "displayName": "Ação",
+        "canonical": "#5B3D9E",
+        "tonalRamp": [
+          "#00003B",
+          "#001D5B",
+          "#173C7C",
+          "#355C9F",
+          "#547DC2",
+          "#749FE7",
+          "#98C5FF",
+          "#C1F0FF"
+        ],
+        "night": "#BBA8EE"
+      },
+      "toque": {
+        "role": "primary",
+        "displayName": "Toque (ripple)",
+        "canonical": "#295B3D9E",
+        "tonalRamp": [
+          "#00003B",
+          "#001D5B",
+          "#173C7C",
+          "#355C9F",
+          "#547DC2",
+          "#749FE7",
+          "#98C5FF",
+          "#C1F0FF"
+        ],
+        "night": "#33BBA8EE"
+      },
+      "normal": {
+        "role": "secondary",
+        "displayName": "Verde Normal",
+        "canonical": "#2E7D4F",
+        "tonalRamp": [
+          "#001400",
+          "#002F0F",
+          "#0C4C2B",
+          "#316C48",
+          "#528C67",
+          "#73AE87",
+          "#98D5AC",
+          "#C2FFD5"
+        ],
+        "night": "#7DCB9F"
+      },
+      "normal_vidrado": {
+        "role": "secondary",
+        "displayName": "Vidrado Normal",
+        "canonical": "#A9D3B8",
+        "tonalRamp": [
+          "#001104",
+          "#0E2B1B",
+          "#2A4736",
+          "#486653",
+          "#678672",
+          "#87A893",
+          "#ACCEB8",
+          "#D6F8E2"
+        ],
+        "night": "#3C6E51"
+      },
+      "normal_base": {
+        "role": "secondary",
+        "displayName": "Base Normal",
+        "canonical": "#88BD9C",
+        "tonalRamp": [
+          "#001202",
+          "#032C18",
+          "#234933",
+          "#416850",
+          "#60886F",
+          "#81AA90",
+          "#A6D0B5",
+          "#CFFBDF"
+        ],
+        "night": "#2B5440"
+      },
+      "atencao": {
+        "role": "secondary",
+        "displayName": "Tinta Atenção",
+        "canonical": "#8F5F00",
+        "tonalRamp": [
+          "#1F0100",
+          "#3C1A00",
+          "#5A3700",
+          "#7B551A",
+          "#9C753D",
+          "#BF965E",
+          "#E6BC83",
+          "#FFE7AC"
+        ],
+        "night": "#F0BA5C"
+      },
+      "atencao_vidrado": {
+        "role": "secondary",
+        "displayName": "Vidrado Âmbar",
+        "canonical": "#E0A33A",
+        "tonalRamp": [
+          "#220000",
+          "#401700",
+          "#5F3500",
+          "#805300",
+          "#A17423",
+          "#C59549",
+          "#ECBB6F",
+          "#FFE599"
+        ],
+        "night": "#C98B2B"
+      },
+      "atencao_base": {
+        "role": "secondary",
+        "displayName": "Base Âmbar",
+        "canonical": "#B8822A",
+        "tonalRamp": [
+          "#200000",
+          "#3D1900",
+          "#5C3600",
+          "#7D550D",
+          "#9E7435",
+          "#C19657",
+          "#E9BC7C",
+          "#FFE6A5"
+        ],
+        "night": "#9A6A1F"
+      },
+      "perigo": {
+        "role": "secondary",
+        "displayName": "Vermelho Perigo",
+        "canonical": "#B3261E",
+        "tonalRamp": [
+          "#330000",
+          "#560000",
+          "#7A0C09",
+          "#9E342B",
+          "#C4564A",
+          "#EA786A",
+          "#FF9E8E",
+          "#FFC9B7"
+        ],
+        "night": "#C2342A"
+      },
+      "perigo_base": {
+        "role": "secondary",
+        "displayName": "Base Perigo",
+        "canonical": "#8C1D17",
+        "tonalRamp": [
+          "#2D0000",
+          "#4F0000",
+          "#711E18",
+          "#953F35",
+          "#B95F54",
+          "#DE8174",
+          "#FFA698",
+          "#FFD0C2"
+        ],
+        "night": "#8E211A"
+      },
+      "sem_conexao": {
+        "role": "secondary",
+        "displayName": "Cinza Sem Conexão",
+        "canonical": "#80868B",
+        "tonalRamp": [
+          "#080C0E",
+          "#212528",
+          "#3C4044",
+          "#5A5E62",
+          "#797E82",
+          "#9A9FA3",
+          "#C0C5C9",
+          "#EAEFF4"
+        ],
+        "night": "#8D9399"
+      },
+      "faixa_atencao": {
+        "role": "secondary",
+        "displayName": "Faixa Atenção",
+        "canonical": "#F6E6C4",
+        "tonalRamp": [
+          "#120900",
+          "#2C230D",
+          "#493E28",
+          "#675C45",
+          "#887C64",
+          "#A99D84",
+          "#CFC3A9",
+          "#FAEDD2"
+        ],
+        "night": "#3A3122"
+      },
+      "faixa_perigo": {
+        "role": "secondary",
+        "displayName": "Faixa Perigo",
+        "canonical": "#F2D2CE",
+        "tonalRamp": [
+          "#160605",
+          "#311F1D",
+          "#4E3A38",
+          "#6D5855",
+          "#8E7774",
+          "#B09895",
+          "#D7BDBA",
+          "#FFE8E4"
+        ],
+        "night": "#40261F"
+      },
+      "rejunte": {
+        "role": "neutral",
+        "displayName": "Rejunte",
+        "canonical": "#D8D9DD",
+        "tonalRamp": [
+          "#0A0C09",
+          "#232521",
+          "#3F403D",
+          "#5C5E5A",
+          "#7C7E7A",
+          "#9D9F9B",
+          "#C3C5C0",
+          "#EDEFEA"
+        ],
+        "night": "#0F1113"
+      },
+      "azulejo": {
+        "role": "neutral",
+        "displayName": "Louça",
+        "canonical": "#FBFBFC",
+        "tonalRamp": [
+          "#0B0B0A",
+          "#242422",
+          "#40403E",
+          "#5E5E5C",
+          "#7D7D7B",
+          "#9E9E9C",
+          "#C4C4C2",
+          "#EFEFEC"
+        ],
+        "night": "#1D2023"
+      },
+      "esmalte_base": {
+        "role": "neutral",
+        "displayName": "Esmalte de Base",
+        "canonical": "#E4E5E9",
+        "tonalRamp": [
+          "#0B0C09",
+          "#232521",
+          "#3F403C",
+          "#5D5E5A",
+          "#7C7E7A",
+          "#9E9F9B",
+          "#C3C5C0",
+          "#EEEFEA"
+        ],
+        "night": "#141618"
+      },
+      "tinta": {
+        "role": "neutral",
+        "displayName": "Tinta Grafite",
+        "canonical": "#22262B",
+        "tonalRamp": [
+          "#090B0F",
+          "#212428",
+          "#3D4044",
+          "#5A5E63",
+          "#7A7E82",
+          "#9B9FA4",
+          "#C0C4CA",
+          "#EAEFF4"
+        ],
+        "night": "#E7E9E6"
+      },
+      "tinta_media": {
+        "role": "neutral",
+        "displayName": "Tinta Média",
+        "canonical": "#545A60",
+        "tonalRamp": [
+          "#080C0F",
+          "#202529",
+          "#3C4045",
+          "#595E63",
+          "#797E83",
+          "#9A9FA4",
+          "#BFC5CA",
+          "#E9EFF5"
+        ],
+        "night": "#B9BEC3"
+      },
+      "tinta_fraca": {
+        "role": "neutral",
+        "displayName": "Tinta Fraca",
+        "canonical": "#666C72",
+        "tonalRamp": [
+          "#080C0F",
+          "#202529",
+          "#3C4045",
+          "#595E63",
+          "#797E83",
+          "#9A9FA4",
+          "#BFC5CA",
+          "#EAEFF5"
+        ],
+        "night": "#A2A8AE"
+      },
+      "fio": {
+        "role": "neutral",
+        "displayName": "Fio",
+        "canonical": "#E2E3E7",
+        "tonalRamp": [
+          "#0B0C09",
+          "#232422",
+          "#3F403D",
+          "#5D5E5B",
+          "#7C7E7A",
+          "#9D9F9B",
+          "#C3C5C1",
+          "#EDEFEB"
+        ],
+        "night": "#2B2F33"
+      },
+      "branco": {
+        "role": "neutral",
+        "displayName": "Branco",
+        "canonical": "#FFFFFF",
+        "tonalRamp": [
+          "#0B0B0B",
+          "#242424",
+          "#404040",
+          "#5D5D5D",
+          "#7D7D7D",
+          "#9E9E9E",
+          "#C4C4C4",
+          "#EEEEEE"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Palavra de estado",
+        "purpose": "Só a palavra de estado no ladrilho grande."
+      },
+      "headline": {
+        "displayName": "Valor do sensor",
+        "purpose": "Valor atual de cada sensor, tabular."
+      },
+      "title-large": {
+        "displayName": "Nome do app",
+        "purpose": "Detector de Gases no ladrilho da marca."
+      },
+      "title": {
+        "displayName": "Título de ladrilho",
+        "purpose": "Nome da casa de cada sensor e títulos de seção (Texto.Titulo)."
+      },
+      "body-large": {
+        "displayName": "Mensagem de estado",
+        "purpose": "O que fazer agora; rótulo de botões em médio."
+      },
+      "body": {
+        "displayName": "Corpo",
+        "purpose": "Significados, porcentagens, tabela (Texto.Corpo)."
+      },
+      "label": {
+        "displayName": "Técnico",
+        "purpose": "Nomes técnicos, eixos, horários (Texto.Tecnico; 13sp em horários e contagens)."
+      }
+    },
+    "shadows": [
+      {
+        "name": "filete-de-esmalte",
+        "value": "camada base 2dp abaixo da face (LayerDrawable, inset bottom 2dp)",
+        "purpose": "Único sinal de volume: espessura do vidrado na base de todo ladrilho. Sem sombras de elevação."
+      }
+    ],
+    "motion": [
+      {
+        "name": "crossfade-estado",
+        "value": "alpha 0.35 → 1, 280ms, DecelerateInterpolator(2f)",
+        "purpose": "Única animação: ladrilho de estado ao mudar de estado; direta com animações desligadas."
+      }
+    ],
+    "borders": [
+      {
+        "name": "borda-estado",
+        "value": "3dp, cor do estado, por dentro do ladrilho",
+        "purpose": "Cor de estado no ladrilho de estado fora do perigo."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Ladrilho da marca (cabeçalho)",
+      "kind": "custom",
+      "refersTo": "ladrilho-marca",
+      "description": "Ladrilho de largura total no topo: nome do app e linha de conexão.",
+      "html": "<div class=\"ds-cabecalho\"><div><div class=\"ds-cab-titulo\">Detector de Gases</div><div class=\"ds-cab-linha\">Conectado ao detector</div></div></div>",
+      "css": ".ds-cabecalho{background:#5B3D9E;border-radius:3px;box-shadow:inset 0 -2px 0 #45307A;min-height:96px;padding:16px 16px 18px 20px;display:flex;align-items:center;font-family:Roboto,sans-serif} .ds-cab-titulo{color:#fff;font-size:22px;font-weight:500} .ds-cab-linha{color:#DCD2F2;font-size:14px;margin-top:4px}"
+    },
+    {
+      "name": "Ladrilho de estado (atenção)",
+      "kind": "card",
+      "refersTo": "ladrilho-estado",
+      "description": "Estado do ar na louça com borda de 3 dp na cor do estado, palavra em 40sp e ações.",
+      "html": "<div class=\"ds-estado\"><svg width=\"44\" height=\"44\" viewBox=\"0 0 24 24\"><path fill=\"#8F5F00\" d=\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\"/></svg><div class=\"ds-estado-palavra\">Atenção</div><div class=\"ds-estado-msg\">O ar da cozinha mudou.<br>•  Abra as janelas.</div></div>",
+      "css": ".ds-estado{background:#FBFBFC;border-radius:3px;box-shadow:inset 0 -2px 0 #E4E5E9;outline:3px solid #E0A33A;outline-offset:-3px;padding:24px 24px 22px;text-align:center;font-family:Roboto,sans-serif;transition:opacity 280ms cubic-bezier(0,0,0.2,1)} .ds-estado-palavra{font-size:40px;font-weight:700;letter-spacing:-0.01em;color:#22262B;margin-top:10px} .ds-estado-msg{font-size:16px;line-height:1.4;color:#545A60;margin-top:8px;text-align:left;display:inline-block}"
+    },
+    {
+      "name": "Ladrilho de estado (perigo)",
+      "kind": "card",
+      "refersTo": "ladrilho-estado-perigo",
+      "description": "Único estado que vira ladrilho cheio: vermelho com texto e ícone brancos.",
+      "html": "<div class=\"ds-perigo\"><div class=\"ds-perigo-palavra\">Perigo</div><div class=\"ds-perigo-msg\">Possível vazamento de gás ou incêndio.<br>•  Feche o registro do gás.<br>Emergência: ligue 193.</div></div>",
+      "css": ".ds-perigo{background:#B3261E;border-radius:3px;box-shadow:inset 0 -2px 0 #8C1D17;padding:24px 24px 22px;text-align:center;color:#fff;font-family:Roboto,sans-serif} .ds-perigo-palavra{font-size:40px;font-weight:700;letter-spacing:-0.01em} .ds-perigo-msg{font-size:16px;line-height:1.4;margin-top:8px;text-align:left;display:inline-block}"
+    },
+    {
+      "name": "Ladrilho de sensor",
+      "kind": "card",
+      "refersTo": "ladrilho-sensor",
+      "description": "Nome da casa, nome técnico, valor tabular e o que significa.",
+      "html": "<div class=\"ds-sensor\"><div class=\"ds-titulo\">Gás e fumaça</div><div class=\"ds-tecnico\">MQ-2</div><div class=\"ds-valor\">414 <span class=\"ds-unidade\">de 1023</span></div><div class=\"ds-corpo\">Botijão, fogão e fumaça</div></div>",
+      "css": ".ds-sensor{background:#FBFBFC;border-radius:3px;box-shadow:inset 0 -2px 0 #E4E5E9;min-height:168px;padding:16px;font-family:Roboto,sans-serif;display:flex;flex-direction:column} .ds-titulo{font-size:16px;font-weight:500;color:#22262B} .ds-tecnico{font-size:12px;color:#666C72} .ds-valor{margin-top:auto;padding-top:12px;font-size:32px;font-weight:500;font-variant-numeric:tabular-nums;color:#22262B} .ds-unidade{font-size:14px;font-weight:400;color:#666C72} .ds-corpo{font-size:13px;color:#545A60;margin-top:4px}"
+    },
+    {
+      "name": "Barra da última hora",
+      "kind": "custom",
+      "refersTo": "barra-estados",
+      "description": "12 ladrilhos pequenos no rejunte, cada um vitrificado na pior cor de estado do trecho.",
+      "html": "<div class=\"ds-barra\"><i class=\"ds-bn\"></i><i class=\"ds-bn\"></i><i class=\"ds-bn\"></i><i class=\"ds-bn\"></i><i class=\"ds-ba\"></i><i class=\"ds-ba\"></i><i class=\"ds-ba\"></i><i class=\"ds-bp\"></i><i class=\"ds-bp\"></i><i class=\"ds-bn\"></i><i class=\"ds-bn\"></i><i class=\"ds-bn\"></i></div>",
+      "css": ".ds-barra{display:flex;gap:3px;padding:3px;background:#D8D9DD;border-radius:2px;height:36px;box-sizing:border-box} .ds-barra i{flex:1;border-radius:2px} .ds-bn{background:#A9D3B8;box-shadow:inset 0 -2px 0 #88BD9C} .ds-ba{background:#E0A33A;box-shadow:inset 0 -2px 0 #B8822A} .ds-bp{background:#B3261E;box-shadow:inset 0 -2px 0 #8C1D17}"
+    },
+    {
+      "name": "Botão da marca",
+      "kind": "button",
+      "refersTo": "botao-marca",
+      "description": "Ação primária (Conectar ao detector), dentro do ladrilho de estado.",
+      "html": "<button class=\"ds-btn-marca\">Conectar ao detector</button>",
+      "css": ".ds-btn-marca{background:#5B3D9E;border-radius:3px;box-shadow:inset 0 -2px 0 #45307A;border:none;color:#fff;font:500 16px Roboto,sans-serif;min-height:52px;padding:0 28px;cursor:pointer} .ds-btn-marca:hover{background-image:linear-gradient(rgba(255,255,255,.12),rgba(255,255,255,.12))} .ds-btn-marca:active{background-image:linear-gradient(rgba(255,255,255,.2),rgba(255,255,255,.2))} .ds-btn-marca:focus-visible{outline:2px solid #22262B;outline-offset:2px}"
+    },
+    {
+      "name": "Botão ladrilho",
+      "kind": "button",
+      "refersTo": "ladrilho-botao",
+      "description": "Ação secundária de largura total (Desconectar), ladrilho de louça com texto em ação.",
+      "html": "<button class=\"ds-btn-ladrilho\">Desconectar</button>",
+      "css": ".ds-btn-ladrilho{background:#FBFBFC;border-radius:3px;box-shadow:inset 0 -2px 0 #E4E5E9;border:none;width:100%;height:64px;color:#5B3D9E;font:500 16px Roboto,sans-serif;cursor:pointer} .ds-btn-ladrilho:hover,.ds-btn-ladrilho:active{background-color:#E9ECF0} .ds-btn-ladrilho:focus-visible{outline:2px solid #5B3D9E;outline-offset:2px}"
+    },
+    {
+      "name": "Linha do seletor de detector",
+      "kind": "nav",
+      "refersTo": "item-detector",
+      "description": "Linha de 64 dp no diálogo de escolha: nome em Title, endereço como detalhe técnico.",
+      "html": "<div class=\"ds-item\" tabindex=\"0\"><div class=\"ds-item-nome\">Detector de Gases</div><div class=\"ds-item-det\">HC-05 · 98:D3:31:00:00:00</div></div>",
+      "css": ".ds-item{min-height:64px;padding:10px 24px;box-sizing:border-box;font-family:Roboto,sans-serif;cursor:pointer} .ds-item:hover,.ds-item:focus-visible{background:#5B3D9E29;outline:none} .ds-item-nome{font-size:16px;font-weight:500;color:#22262B} .ds-item-det{font-size:13px;color:#666C72;margin-top:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Parede de Azulejos atrás do Fogão",
+    "overview": "A tela é um pedaço de parede de cozinha. O fundo é rejunte cinza-claro; cada bloco de informação é um ladrilho branco vitrificado assentado com juntas finas e iguais; um ladrilho de cabeçalho é pintado na cor da marca e um ladrilho decorativo carrega um motivo geométrico na cor da marca, desenhado em vetor. Nada flutua, nada é cartão solto: tudo está assentado na mesma parede, alinhado pela mesma junta.\n\nA densidade é de consulta calma. O ladrilho de estado domina a primeira dobra e diz, com ícone, palavra e frase, o que está acontecendo e o que fazer; o resto (sensores, barra da última hora, resumo, gráficos) é leitura ocasional em ladrilhos menores. A cor de estado é contida: aparece como borda do ladrilho de estado e como vidrado nos ladrilhos da barra. Só o perigo toma o ladrilho inteiro em vermelho. À noite a parede muda de material (rejunte grafite, ladrilho cinza-esmalte) e a marca permanece.\n\nO sistema recusa o painel escuro de casa inteligente com medidores e o app genérico de cartões soltos com sombra. Movimento é quase nenhum: um único crossfade curto no ladrilho de estado.",
+    "keyCharacteristics": [
+      "Rejunte como fundo, ladrilhos vitrificados como superfícies, juntas de 4 dp entre tudo.",
+      "Profundidade só pelo filete de esmalte na base de cada ladrilho; sem sombras de elevação.",
+      "Uma cor de marca por tema (roxo por padrão); cores de estado reservadas a estado.",
+      "Estado sempre com ícone e palavra, nunca só cor.",
+      "Roboto com números tabulares; tinta grafite em três intensidades."
+    ],
+    "rules": [
+      {
+        "name": "The Cor Só no Estado Rule",
+        "body": "Verde, âmbar e vermelho aparecem só onde há estado: borda e ícone do ladrilho de estado, ladrilhos da barra, faixas do gráfico e notificações. Nunca como decoração, nunca em títulos ou botões.",
+        "section": "colors"
+      },
+      {
+        "name": "The Uma Marca Rule",
+        "body": "Cada tema tem uma única cor de marca, que vale no claro e no escuro. Não se introduz segunda cor de destaque, e nenhum tema usa verde, âmbar ou vermelho.",
+        "section": "colors"
+      },
+      {
+        "name": "The Nome da Casa Primeiro Rule",
+        "body": "O nome em linguagem de casa (\"Gás e fumaça\") vai em Title e tinta cheia; o nome técnico (\"MQ-2\") vem logo depois em Label e tinta fraca. Nunca o contrário.",
+        "section": "typography"
+      },
+      {
+        "name": "The Número Tabular Rule",
+        "body": "Todo número que se atualiza usa `tnum`, para não tremer a cada leitura.",
+        "section": "typography"
+      },
+      {
+        "name": "The Junta Única Rule",
+        "body": "Entre quaisquer dois ladrilhos a distância é sempre a junta de 4 dp. Espaço maior se cria dentro do ladrilho, nunca alargando a junta.",
+        "section": "layout"
+      },
+      {
+        "name": "The Filete de Esmalte Rule",
+        "body": "Todo ladrilho, desenhado em XML ou em código, tem face com cantos de 3 dp e filete de 2 dp na base no tom `*_base` correspondente. É o único sinal de volume do sistema.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** assentar toda informação nova num ladrilho (`@style/Ladrilho` ou o helper de ladrilho em código), com junta de 4 dp.",
+      "**Do** acompanhar toda cor de estado de ícone e palavra.",
+      "**Do** mostrar \"Sem conexão\"/\"Sem leituras\" em cinza neutro e apagar valores antigos para tinta fraca com o horário da última leitura.",
+      "**Do** usar `tnum` em todo número que muda.",
+      "**Do** derivar o tema noturno trocando apenas os valores de `values-night/colors.xml`, mantendo os mesmos nomes."
+    ],
+    "donts": [
+      "**Don't** usar sombra ou elevação; o volume vem só do filete de esmalte.",
+      "**Don't** pintar um ladrilho inteiro com cor de estado que não seja perigo.",
+      "**Don't** usar cantos maiores que 3 dp ou formas de pílula.",
+      "**Don't** criar cartões soltos com margens diferentes da junta, nem medidores circulares de painel de casa inteligente.",
+      "**Don't** usar o motivo na cor da marca como fundo atrás de texto; ele vive só no ladrilho pintado e no ícone.",
+      "**Don't** animar nada além do crossfade do ladrilho de estado."
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- base clara/escura; o Tema e os temas de cor ficam só em values/themes.xml -->
+    <style name="TemaBase" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Tema.Dialogo" parent="@android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">?attr/acao</item>
+        <item name="android:colorBackground">@color/azulejo</item>
+        <item name="android:textColorPrimary">@color/tinta</item>
+        <item name="android:textColorSecondary">@color/tinta_media</item>
+        <item name="android:buttonBarButtonStyle">@style/Tema.BotaoDialogo</item>
+    </style>
+
+    <style name="Tema.BotaoDialogo" parent="@android:style/Widget.Material.Button.Borderless.Colored">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

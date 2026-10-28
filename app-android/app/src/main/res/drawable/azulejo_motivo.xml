@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ladrilho pintado à mão na cor da marca (desenho original do app) -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp" android:height="120dp"
+    android:viewportWidth="48" android:viewportHeight="48">
+    <path android:fillColor="?attr/marca" android:pathData="M0,0 L14,0 A14,14 0 0,1 0,14 Z M48,0 L48,14 A14,14 0 0,1 34,0 Z M48,48 L34,48 A14,14 0 0,1 48,34 Z M0,48 L0,34 A14,14 0 0,1 14,48 Z M24,7 L29,19 L41,24 L29,29 L24,41 L19,29 L7,24 L19,19 Z" />
+    <path android:fillColor="@color/azulejo" android:pathData="M21.5,24 A2.5,2.5 0 1,0 26.5,24 A2.5,2.5 0 1,0 21.5,24 Z" />
+    <path android:strokeColor="?attr/marca" android:strokeWidth="1" android:fillColor="#00000000"
+        android:pathData="M24,13 A11,11 0 1,1 23.99,13 Z" />
+</vector>

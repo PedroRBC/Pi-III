@@ -1,3 +1,5 @@
+#include <SoftwareSerial.h>
+
 // ===============================
 // PINOS
 // ===============================
@@ -8,6 +10,17 @@ const int LM35DZ = A2;
 
 const int LED = 8;
 const int BUZZER = 9;
+
+// HC-05: TX do modulo -> pino 10 | RX do modulo <- pino 11
+// O RX do HC-05 e 3,3 V: use divisor de tensao (ex.: 1k + 2k) no pino 11
+const int BT_RX = 10;
+const int BT_TX = 11;
+
+SoftwareSerial bluetooth(BT_RX, BT_TX);
+
+// Nome do detector no Bluetooth do celular. O app so lista aparelhos
+// cujo nome comeca com "DetectorGases"; para um segundo detector use -02.
+const char NOME_BLUETOOTH[] = "DetectorGases-01";
 
 
 // ===============================
@@ -36,6 +49,8 @@ void setup() {
   pinMode(BUZZER, OUTPUT);
 
   Serial.begin(9600);
+  gravarNomeBluetooth();
+  bluetooth.begin(9600); // baud padrao do HC-05 em modo de dados
 
   digitalWrite(LED, LOW);
   noTone(BUZZER);
@@ -44,6 +59,60 @@ void setup() {
   Serial.println(" DETECTOR DE GAS E INCENDIO");
   Serial.println(" (VERSAO COM LM35DZ)");
   Serial.println("================================");
+}
+
+
+// ===============================
+// NOME DO HC-05 (feito uma vez)
+// ===============================
+
+// Para gravar: segure o botao do HC-05 enquanto liga o Arduino. O modulo
+// entra em modo AT (38400 baud), o sketch grava o nome e o LED pisca:
+// devagar = gravado, rapido = falhou. Depois desligue e ligue sem o botao.
+// Ligado normalmente, o modulo nao responde "OK" e o detector segue.
+
+// Envia um comando AT e espera "OK" por ate 1 s.
+bool comandoAT(String comando) {
+  bluetooth.print(comando);
+  bluetooth.print("\r\n");
+  String resposta = "";
+  unsigned long inicio = millis();
+  while (millis() - inicio < 1000) {
+    while (bluetooth.available()) {
+      resposta += (char) bluetooth.read();
+    }
+    if (resposta.indexOf("OK") >= 0) {
+      return true;
+    }
+  }
+  Serial.print(comando);
+  Serial.print(" falhou: ");
+  Serial.println(resposta);
+  return false;
+}
+
+void gravarNomeBluetooth() {
+  delay(1000); // tempo do HC-05 iniciar
+  bluetooth.begin(38400);
+  if (!comandoAT("AT")) {
+    bluetooth.end(); // modo normal: nada a gravar
+    return;
+  }
+
+  bool gravado =
+    comandoAT(String("AT+NAME=") + NOME_BLUETOOTH) &&
+    comandoAT("AT+UART=9600,0,0"); // baud do modo de dados usado no loop
+
+  Serial.println(gravado
+    ? "HC-05 gravado. Desligue e ligue o Arduino sem segurar o botao."
+    : "Falha ao gravar o HC-05. Confira a ligacao e tente de novo.");
+
+  // em modo AT o modulo nao envia dados: fica aqui ate desligar
+  int pisca = gravado ? 1000 : 150;
+  while (true) {
+    digitalWrite(LED, !digitalRead(LED));
+    delay(pisca);
+  }
 }
 
 
@@ -91,10 +160,37 @@ void loop() {
     valorMQ2 >= MQ2_PERIGO ||
     valorMQ135 >= MQ135_PERIGO;
 
+  bool atencao =
+    temperatura >= TEMP_ATENCAO ||
+    valorMQ2 >= MQ2_ATENCAO ||
+    valorMQ135 >= MQ135_ATENCAO;
+
+  // 0 = normal, 1 = atencao, 2 = perigo
+  int estado = 0;
+  if (temperaturaPerigosa || gasesPerigosos) {
+    estado = 2;
+  } else if (atencao) {
+    estado = 1;
+  }
+
+
+  // ===============================
+  // ENVIA PARA O APP (HC-05)
+  // ===============================
+
+  // Formato: mq2,mq135,temperatura,estado  (ex.: 312,280,25.40,1)
+  bluetooth.print(valorMQ2);
+  bluetooth.print(',');
+  bluetooth.print(valorMQ135);
+  bluetooth.print(',');
+  bluetooth.print(temperatura);
+  bluetooth.print(',');
+  bluetooth.println(estado);
+
 
   // Se temperatura estiver muito alta
   // OU houver grande quantidade de gases
-  if (temperaturaPerigosa || gasesPerigosos) {
+  if (estado == 2) {
 
     digitalWrite(LED, HIGH);
 
@@ -122,11 +218,7 @@ void loop() {
   // ATENCAO
   // ===============================
 
-  else if (
-    temperatura >= TEMP_ATENCAO ||
-    valorMQ2 >= MQ2_ATENCAO ||
-    valorMQ135 >= MQ135_ATENCAO
-  ) {
+  else if (estado == 1) {
 
     Serial.println(">>> ATENCAO <<<");
 

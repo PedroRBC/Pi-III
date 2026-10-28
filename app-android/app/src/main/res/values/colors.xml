@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Parede de azulejo: rejunte cinza, ladrilho vitrificado; a cor da marca vem do tema -->
+    <color name="rejunte">#D8D9DD</color>
+    <color name="azulejo">#FBFBFC</color>
+    <color name="esmalte_base">#E4E5E9</color>
+    <color name="tinta">#22262B</color>
+    <color name="tinta_media">#545A60</color>
+    <color name="tinta_fraca">#666C72</color>
+    <color name="fio">#E2E3E7</color>
+
+    <!-- estados -->
+    <color name="normal">#2E7D4F</color>
+    <color name="normal_vidrado">#A9D3B8</color>
+    <color name="normal_base">#88BD9C</color>
+    <color name="atencao">#8F5F00</color>
+    <color name="atencao_vidrado">#E0A33A</color>
+    <color name="atencao_base">#B8822A</color>
+    <color name="perigo">#B3261E</color>
+    <color name="perigo_base">#8C1D17</color>
+    <color name="sem_conexao">#80868B</color>
+    <color name="faixa_atencao">#F6E6C4</color>
+    <color name="faixa_perigo">#F2D2CE</color>
+    <color name="icone_fundo">#5B3D9E</color>
+
+    <!-- temas: cor da marca de cada um (ver Temas.kt) -->
+    <color name="roxo">#5B3D9E</color>
+    <color name="roxo_base">#45307A</color>
+    <color name="roxo_claro">#DCD2F2</color>
+    <color name="roxo_acao">#5B3D9E</color>
+    <color name="roxo_toque">#295B3D9E</color>
+    <color name="azul">#1E4FA3</color>
+    <color name="azul_base">#163C7E</color>
+    <color name="azul_claro">#D3DDF2</color>
+    <color name="azul_acao">#1E4FA3</color>
+    <color name="azul_toque">#291E4FA3</color>
+    <color name="petroleo">#0E5A6B</color>
+    <color name="petroleo_base">#0A4350</color>
+    <color name="petroleo_claro">#CBE5EA</color>
+    <color name="petroleo_acao">#0E5A6B</color>
+    <color name="petroleo_toque">#290E5A6B</color>
+    <color name="grafite">#3B4046</color>
+    <color name="grafite_base">#2A2E33</color>
+    <color name="grafite_claro">#D8DBDF</color>
+    <color name="grafite_acao">#3B4046</color>
+    <color name="grafite_toque">#293B4046</color>
+</resources>
