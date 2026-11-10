@@ -10,6 +10,8 @@ Repositório com códigos Arduino do projeto.
 
 ## Ligação do HC-05 (versão LM35DZ)
 
+Montagem completa, com todos os componentes e resistores: [MONTAGEM.md](MONTAGEM.md).
+
 | HC-05 | Arduino |
 |-------|---------|
 | VCC   | 5V |
