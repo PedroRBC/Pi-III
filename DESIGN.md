@@ -1,5 +1,5 @@
 ---
-name: Detector de Gases
+name: SafeSense
 description: Parede de azulejos atrás do fogão; cada informação no seu ladrilho, o estado do ar no ladrilho grande.
 colors:
   marca: "#5B3D9E"
@@ -124,7 +124,7 @@ components:
     height: "64dp"
 ---
 
-# Design System: Detector de Gases
+# Design System: SafeSense
 
 ## Overview
 
@@ -194,7 +194,7 @@ Cada estado tem três papéis: a cor de **tinta/borda** (legível como texto ou 
 ### Hierarchy
 - **Display** (bold, 40sp, espaçamento -0.01): a palavra de estado no ladrilho grande ("Ar normal", "Atenção", "Perigo"). Uso único na tela.
 - **Headline** (medium, 32sp, tabular): o valor de cada sensor, com a unidade ao lado em rótulo de 14sp.
-- **Title Large** (medium, 22sp): o nome "Detector de Gases" no ladrilho da marca.
+- **Title Large** (medium, 22sp): o nome "SafeSense" no ladrilho da marca.
 - **Title** (medium, 16sp, `Texto.Titulo`): nome da casa de cada sensor e título de cada ladrilho de seção ("Como esteve o ar", "Resumo da sessão"); nome do detector no seletor.
 - **Body Large** (regular, 16sp, +3sp entre linhas): mensagem do que fazer no ladrilho de estado, largura máxima de 320 dp; rótulo dos botões (médio).
 - **Body** (regular, 14sp, +2sp, `Texto.Corpo`): frases de significado, porcentagens por estado, células da tabela.

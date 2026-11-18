@@ -12,7 +12,7 @@
 
     <application
         android:icon="@mipmap/ic_launcher"
-        android:label="Detector de Gases"
+        android:label="SafeSense"
         android:theme="@style/Tema">
 
         <activity

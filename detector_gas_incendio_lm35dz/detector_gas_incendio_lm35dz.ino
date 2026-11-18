@@ -117,6 +117,40 @@ void gravarNomeBluetooth() {
 
 
 // ===============================
+// TEMPERATURA (LM35DZ)
+// ===============================
+
+// Referencia interna do ATmega328P (Uno/Nano). Vale cerca de 1,1 V, mas
+// varia de placa para placa: para calibrar, meca a tensao no pino AREF
+// com um multimetro enquanto o sketch roda e coloque o valor aqui.
+const float VREF_INTERNA = 1.1;
+
+// O LM35DZ gera so 10 mV por grau. Medido contra os 5 V, a leitura sai
+// alta porque a tensao real do USB fica abaixo de 5 V quando os
+// aquecedores dos MQ estao ligados, e porque o ADC ainda guarda a tensao
+// do MQ lido logo antes. Aqui a leitura usa a referencia interna de 1,1 V
+// (nao depende dos 5 V e vai ate 110 C), descarta a primeira conversao e
+// tira a media de 10.
+float lerTemperatura() {
+  analogReference(INTERNAL);
+  delay(20);             // AREF baixa de 5 V para 1,1 V
+  analogRead(LM35DZ);    // descarta: ainda com a tensao do canal anterior
+
+  long soma = 0;
+  for (int i = 0; i < 10; i++) {
+    soma += analogRead(LM35DZ);
+  }
+
+  analogReference(DEFAULT); // os MQ continuam medidos contra 5 V
+  delay(20);
+  analogRead(MQ2);          // descarta a primeira conversao em 5 V
+
+  float tensao = (soma / 10.0) * (VREF_INTERNA / 1023.0);
+  return tensao * 100.0; // 10 mV por grau Celsius
+}
+
+
+// ===============================
 // LOOP PRINCIPAL
 // ===============================
 
@@ -125,11 +159,7 @@ void loop() {
   // Leitura dos sensores
   int valorMQ2 = analogRead(MQ2);
   int valorMQ135 = analogRead(MQ135);
-  int valorLM35 = analogRead(LM35DZ);
-
-  // LM35DZ: 10 mV por grau Celsius
-  float tensao = valorLM35 * (5.0 / 1023.0);
-  float temperatura = tensao * 100.0;
+  float temperatura = lerTemperatura();
 
 
   // ===============================

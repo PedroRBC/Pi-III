@@ -6,7 +6,7 @@ Repositório com códigos Arduino do projeto.
 
 - `detector_gas_incendio.ino`: detector de gás e incêndio usando MQ-2, MQ-135, DHT11, LED e buzzer.
 - `detector_gas_incendio_lm35dz.ino`: versão similar usando MQ-2, MQ-135, LM35DZ, LED, buzzer e módulo Bluetooth HC-05.
-- `app-android/`: app Android **Detector de Gases**, que recebe os dados do HC-05, mostra os valores, gera alertas no celular e exibe estatísticas.
+- `app-android/`: app Android **SafeSense**, que recebe os dados do HC-05, mostra os valores, gera alertas no celular e exibe estatísticas.
 
 ## Ligação do HC-05 (versão LM35DZ)
 
@@ -33,7 +33,7 @@ Recursos:
 - valores atuais, estatísticas da sessão (mínimo, média, máximo e % do tempo em cada estado) e gráficos de MQ-2, MQ-135 e temperatura da última hora;
 - tema claro e escuro, seletor de cor (roxo e cinza por padrão, azul azulejo, petróleo e grafite), textos em português e o que fazer em cada estado (ex.: em perigo, fechar o registro do gás e ligar 193).
 
-O app se chama **Detector de Gases**. Capturas de tela em `app-android/screenshots/`; as decisões visuais estão em `DESIGN.md`.
+O app se chama **SafeSense**. Capturas de tela em `app-android/screenshots/`; as decisões visuais estão em `DESIGN.md`.
 
 Nome do detector no Bluetooth (uma vez por módulo):
 1. Segure o botão do HC-05 enquanto liga o Arduino. O sketch grava o nome `DetectorGases-01` (constante `NOME_BLUETOOTH`) e o LED pisca devagar; se piscar rápido, falhou (veja o Monitor Serial).

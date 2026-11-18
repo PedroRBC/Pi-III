@@ -154,7 +154,7 @@ class MonitorService : Service() {
         Notification.Builder(this, CANAL_MONITOR)
             .setSmallIcon(R.drawable.ic_notificacao)
             .setColor(ContextThemeWrapper(this, temaAtual().estilo).corDoTema(R.attr.marca))
-            .setContentTitle("Detector de Gases")
+            .setContentTitle("SafeSense")
             .setGroup("monitor")
             .setContentText(texto)
             .setContentIntent(abrirApp())

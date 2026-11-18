@@ -32,7 +32,7 @@ Avisar no celular quando há risco de vazamento de gás ou de incêndio na cozin
 
 ## Brand Commitments
 
-- Nome do produto e do dispositivo: **Detector de Gases**.
+- Nome do produto: **SafeSense**. O aparelho é chamado de "detector" nos textos (no Bluetooth aparece como `DetectorGases-01`).
 - Interface em português do Brasil.
 - Sem logo, ícone ou cores pré-existentes: identidade a ser criada.
 

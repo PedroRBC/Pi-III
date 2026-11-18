@@ -34,7 +34,7 @@
                     android:layout_height="wrap_content"
                     android:accessibilityHeading="true"
                     android:fontFamily="sans-serif-medium"
-                    android:text="Detector de Gases"
+                    android:text="SafeSense"
                     android:textColor="#FFFFFF"
                     android:textSize="22sp" />
 

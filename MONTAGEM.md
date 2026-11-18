@@ -1,4 +1,4 @@
-# Montagem do Detector de Gases
+# Montagem do detector SafeSense
 
 Guia de montagem da versão `detector_gas_incendio_lm35dz.ino` (MQ-2, MQ-135, LM35DZ, LED, buzzer e Bluetooth HC-05). Os pinos valem para Arduino Uno e Nano.
 
@@ -56,6 +56,11 @@ Segure o LM35DZ com a **face reta virada para você** e as pernas para baixo:
 | Direita (GND) | GND (trilha −) |
 
 Se ele esquentar sozinho ao ligar, está invertido. Desligue na hora e vire o sensor.
+
+Para a temperatura não sair acima da real:
+
+- Ligue a perna GND do LM35DZ com um fio próprio direto num pino **GND do Arduino**, não na trilha onde estão os MQ. A corrente dos aquecedores dos MQ na trilha desloca o GND e soma graus à leitura.
+- Deixe o LM35DZ a alguns centímetros dos MQ: os aquecedores esquentam o ar em volta e o sensor mede esse calor.
 
 ## 5. LED com resistor
 
